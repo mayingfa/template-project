@@ -9,3 +9,6 @@
 ### 项目模板介绍
 
 [【项目模板】后端接口统一规范（validation-and-exception-handler）](https://gitee.com/ma_ying_fa/template-project/tree/master/validation-and-exception-handler)
+
+[【项目模板】SpringBoot整合Elasticsearch（springboot-elasticsearch）](https://gitee.com/ma_ying_fa/template-project/tree/master/springboot-elasticsearch)
+
