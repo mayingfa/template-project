@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot-elasticsearch
+
+  elasticsearch:
+    rest:
+      # 逗号分隔的Elasticsearch实例使用的列表
+      uris: http://localhost:9200
+      # 链接超时时间
+      connection-timeout: 5000
+      # 读取超时时间
+      read-timeout: 3000
+      # ES 用户名
+      username: elastic
+      # ES 密码
+      password: 123456
+
+swagger:
+  enable: true
