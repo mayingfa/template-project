@@ -38,3 +38,8 @@ ik分词器下载地址：https://github.com/medcl/elasticsearch-analysis-ik/rel
 elasticsearch-head插件下载地址：https://github.com/mobz/elasticsearch-head
 
 文章推荐：https://blog.csdn.net/qq_26966709/article/details/119522717
+
+## Canal实现MySQL数据同步到Elasticsearch
+
+- https://mp.weixin.qq.com/s/EDlQKw8VChHYTGidFS9Rcg
+- https://mp.weixin.qq.com/s/zaV98KHVyXUW32DqypU1OQ
