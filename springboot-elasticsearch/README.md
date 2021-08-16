@@ -41,5 +41,6 @@ elasticsearch-head插件下载地址：https://github.com/mobz/elasticsearch-hea
 
 ## Canal实现MySQL数据同步到Elasticsearch
 
+- https://github.com/alibaba/canal/releases
 - https://mp.weixin.qq.com/s/EDlQKw8VChHYTGidFS9Rcg
 - https://mp.weixin.qq.com/s/zaV98KHVyXUW32DqypU1OQ
