@@ -40,7 +40,15 @@ elasticsearch-head插件下载地址：https://github.com/mobz/elasticsearch-hea
 
 文章推荐：https://blog.csdn.net/qq_26966709/article/details/119522717
 
-<<<<<<< HEAD
+## Canal实现MySQL数据同步到Elasticsearch
+
+- https://github.com/alibaba/canal/releases
+- https://mp.weixin.qq.com/s/EDlQKw8VChHYTGidFS9Rcg
+- https://mp.weixin.qq.com/s/zaV98KHVyXUW32DqypU1OQ
+- [使用canal同步mysql数据到ES:日期格式问题.](https://blog.csdn.net/weixin_41546244/article/details/108381219)
+- [ES插入date类型数据报错failed to parse field [case_date] of type [date]](https://blog.csdn.net/xinguopeng/article/details/117028841)
+
+
 ```bash
 PUT /mall_product/
 {
@@ -76,12 +84,3 @@ POST /mall_product/_search
 
 DELETE /mall_product
 ```
-=======
-## Canal实现MySQL数据同步到Elasticsearch
-
-- https://github.com/alibaba/canal/releases
-- https://mp.weixin.qq.com/s/EDlQKw8VChHYTGidFS9Rcg
-- https://mp.weixin.qq.com/s/zaV98KHVyXUW32DqypU1OQ
-- [使用canal同步mysql数据到ES:日期格式问题.](https://blog.csdn.net/weixin_41546244/article/details/108381219)
-- [ES插入date类型数据报错failed to parse field [case_date] of type [date]](https://blog.csdn.net/xinguopeng/article/details/117028841)
->>>>>>> 74e3ae3ada5b706644faa5c5310d4294ec3074e1
