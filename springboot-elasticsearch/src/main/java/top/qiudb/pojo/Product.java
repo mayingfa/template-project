@@ -24,7 +24,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(indexName = "product")
+@Document(indexName = "mall_product")
 @ApiModel(value = "Product", description = "商品描述信息")
 public class Product implements Serializable {
     @Id

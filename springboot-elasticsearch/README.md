@@ -38,3 +38,39 @@ ik分词器下载地址：https://github.com/medcl/elasticsearch-analysis-ik/rel
 elasticsearch-head插件下载地址：https://github.com/mobz/elasticsearch-head
 
 文章推荐：https://blog.csdn.net/qq_26966709/article/details/119522717
+
+```bash
+PUT /mall_product/
+{
+    "mappings": {
+    	"properties": {
+    		"name": {
+    			"type": "text",
+    			"analyzer":"ik_max_word"
+    		},
+    		"type": {
+    			"type": "keyword"
+    		},
+    		"brand": {
+    			"type": "keyword"
+    		},
+    		"price": {
+    			"type": "double"
+    		},
+    		"sale_time": {
+    			"type": "date",
+    			"format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+    		},
+    		"url": {
+    			"type": "keyword"
+    		}
+    	}	
+    }
+}
+
+GET /mall_product/
+
+POST /mall_product/_search  
+
+DELETE /mall_product
+```

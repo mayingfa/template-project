@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     private static final String FIELD_TYPE = "type";
     private static final String FIELD_BRAND = "brand";
     private static final String FIELD_PRICE = "price";
-    private static final String FIELD_SALE_TIME = "saleTime";
+    private static final String FIELD_SALE_TIME = "sale_time";
 
 
     /**
@@ -237,7 +237,7 @@ public class ProductServiceImpl implements ProductService {
         NativeSearchQuery nativeSearchQuery = new NativeSearchQueryBuilder()
                 // 先价格排序，再上架时间降序排序
                 .withSort(SortBuilders.fieldSort(FIELD_PRICE).order(priceDesc ? SortOrder.DESC : SortOrder.ASC))
-                .withSort(SortBuilders.fieldSort(FIELD_SALE_TIME).order(SortOrder.DESC))
+                .withSort(SortBuilders.fieldSort(FIELD_SALE_TIME).unmappedType("date").order(SortOrder.DESC))
                 .withPageable(pageable)
                 .withQuery(boolQueryBuilder)
                 .build();
