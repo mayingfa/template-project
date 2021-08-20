@@ -26,6 +26,7 @@ SpringBoot整合Elasticsearch
 - https://blog.csdn.net/u013089490/article/details/84323903
 - https://blog.csdn.net/wwwzhouzy/article/details/118638946
 - https://blog.csdn.net/numbbe/article/details/109826032
+- https://www.cnblogs.com/huanshilang/p/13049250.html
 
 ## Elasticsearch 相关
 
@@ -44,3 +45,5 @@ elasticsearch-head插件下载地址：https://github.com/mobz/elasticsearch-hea
 - https://github.com/alibaba/canal/releases
 - https://mp.weixin.qq.com/s/EDlQKw8VChHYTGidFS9Rcg
 - https://mp.weixin.qq.com/s/zaV98KHVyXUW32DqypU1OQ
+- [使用canal同步mysql数据到ES:日期格式问题.](https://blog.csdn.net/weixin_41546244/article/details/108381219)
+- [ES插入date类型数据报错failed to parse field [case_date] of type [date]](https://blog.csdn.net/xinguopeng/article/details/117028841)
