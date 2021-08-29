@@ -1,0 +1,29 @@
+justauth:
+  enabled: true
+
+  login: http://127.0.0.1:8443/oauth/login/
+
+  type:
+    DINGTALK:
+      client-id: dingsedbxp1wtqlpftly
+      client-secret: OFVcpCrcmB6Rd7HYwmxmxsXG5hrHqgKRu7cX1oNmDzrtrVQrC3Eiyvc9SRXs3Cl8
+      redirect-uri: http://127.0.0.1:8443/oauth/callback/dingtalk
+    BAIDU:
+      client-id: 3PMCGmaDjgLj2i4OTsahCnbW
+      client-secret: BprKVGweI4Gib5aGEtzMf7LLmLD7s6i0
+      redirect-uri: http://127.0.0.1:8443/oauth/callback/baidu
+    GITEE:
+      client-id: 3841b21782887dc1165f39ec11a813ddb5c2edceb7b7cf8e17190307e5bcb6dd
+      client-secret: defafd05e33202493f342558e6cffd9bca14bcdeb47f728559cdf2eaee849f52
+      redirect-uri: http://127.0.0.1:8443/oauth/callback/gitee
+      scopes:
+        - user_info
+    HUAWEI:
+      client-id: 104677841
+      client-secret: d18dbad490a60f48701c26afa9398f023699d64637a0ef5cf5e9c7c3ee9b570d
+      redirect-uri: http://127.0.0.1:8443/oauth/callback/huawei
+
+  cache:
+    type: redis
+    prefix: 'SOCIAL::STATE::'
+    timeout: 1h
