@@ -12,3 +12,5 @@
 
 [【项目模板】SpringBoot整合Elasticsearch（springboot-elasticsearch）](https://gitee.com/ma_ying_fa/template-project/tree/master/springboot-elasticsearch)
 
+[【项目模板】JustAuth整合第三方登录（springboot-justauth）](https://gitee.com/ma_ying_fa/template-project/tree/master/springboot-justauth)
+
