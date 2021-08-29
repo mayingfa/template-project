@@ -9,6 +9,7 @@ import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Optional;
 
 /**
  * @author Dt
@@ -23,10 +24,7 @@ public class SpringbootJustauthApplication {
         Environment env = application.getEnvironment();
         String ip = InetAddress.getLocalHost().getHostAddress();
         String port = env.getProperty("server.port");
-        String path = env.getProperty("server.servlet.context-path");
-        if (StringUtils.isEmpty(path)) {
-            path = "";
-        }
+        String path = Optional.ofNullable(env.getProperty("server.servlet.context-path")).orElse("");
         log.info("\n----------------------------------------------------------------------------\n\t" +
                 "Application  is running! Access URLs:\n\t" +
                 "Local访问网址: \t\thttp://localhost:" + port + path + "/oauth\n\t" +
