@@ -14,3 +14,4 @@
 
 [【项目模板】JustAuth整合第三方登录（springboot-justauth）](https://gitee.com/ma_ying_fa/template-project/tree/master/springboot-justauth)
 
+[【项目模板】Springboot整合Redis工具类（springboot-redis）](https://gitee.com/ma_ying_fa/template-project/tree/master/springboot-redis)
