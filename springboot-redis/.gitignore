@@ -37,3 +37,4 @@ build/
 .mvn
 mvnw*
 .iml
+.log
