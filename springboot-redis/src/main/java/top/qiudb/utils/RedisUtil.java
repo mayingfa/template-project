@@ -697,8 +697,7 @@ public class RedisUtil {
      * @return
      */
     public String lRightPopAndLeftPush(String sourceKey, String destinationKey) {
-        return redisTemplate.opsForList().rightPopAndLeftPush(sourceKey,
-                destinationKey);
+        return redisTemplate.opsForList().rightPopAndLeftPush(sourceKey, destinationKey);
     }
 
     /**
@@ -849,8 +848,7 @@ public class RedisUtil {
      * @return
      */
     public Long sIntersectAndStore(String key, String otherKey, String destKey) {
-        return redisTemplate.opsForSet().intersectAndStore(key, otherKey,
-                destKey);
+        return redisTemplate.opsForSet().intersectAndStore(key, otherKey, destKey);
     }
 
     /**
@@ -863,8 +861,7 @@ public class RedisUtil {
      */
     public Long sIntersectAndStore(String key, Collection<String> otherKeys,
                                    String destKey) {
-        return redisTemplate.opsForSet().intersectAndStore(key, otherKeys,
-                destKey);
+        return redisTemplate.opsForSet().intersectAndStore(key, otherKeys, destKey);
     }
 
     /**
@@ -909,8 +906,7 @@ public class RedisUtil {
      * @param destKey
      * @return
      */
-    public Long sUnionAndStore(String key, Collection<String> otherKeys,
-                               String destKey) {
+    public Long sUnionAndStore(String key, Collection<String> otherKeys, String destKey) {
         return redisTemplate.opsForSet().unionAndStore(key, otherKeys, destKey);
     }
 
@@ -945,8 +941,7 @@ public class RedisUtil {
      * @return
      */
     public Long sDifference(String key, String otherKey, String destKey) {
-        return redisTemplate.opsForSet().differenceAndStore(key, otherKey,
-                destKey);
+        return redisTemplate.opsForSet().differenceAndStore(key, otherKey, destKey);
     }
 
     /**
@@ -959,8 +954,7 @@ public class RedisUtil {
      */
     public Long sDifference(String key, Collection<String> otherKeys,
                             String destKey) {
-        return redisTemplate.opsForSet().differenceAndStore(key, otherKeys,
-                destKey);
+        return redisTemplate.opsForSet().differenceAndStore(key, otherKeys, destKey);
     }
 
     /**
@@ -1150,8 +1144,7 @@ public class RedisUtil {
      */
     public Set<TypedTuple<String>> zRangeByScoreWithScores(String key,
                                                            double min, double max, long start, long end) {
-        return redisTemplate.opsForZSet().rangeByScoreWithScores(key, min, max,
-                start, end);
+        return redisTemplate.opsForZSet().rangeByScoreWithScores(key, min, max, start, end);
     }
 
     /**
@@ -1176,8 +1169,7 @@ public class RedisUtil {
      */
     public Set<TypedTuple<String>> zReverseRangeWithScores(String key,
                                                            long start, long end) {
-        return redisTemplate.opsForZSet().reverseRangeWithScores(key, start,
-                end);
+        return redisTemplate.opsForZSet().reverseRangeWithScores(key, start, end);
     }
 
     /**
@@ -1188,8 +1180,7 @@ public class RedisUtil {
      * @param max
      * @return
      */
-    public Set<String> zReverseRangeByScore(String key, double min,
-                                            double max) {
+    public Set<String> zReverseRangeByScore(String key, double min, double max) {
         return redisTemplate.opsForZSet().reverseRangeByScore(key, min, max);
     }
 
@@ -1203,8 +1194,7 @@ public class RedisUtil {
      */
     public Set<TypedTuple<String>> zReverseRangeByScoreWithScores(
             String key, double min, double max) {
-        return redisTemplate.opsForZSet().reverseRangeByScoreWithScores(key,
-                min, max);
+        return redisTemplate.opsForZSet().reverseRangeByScoreWithScores(key, min, max);
     }
 
     /**
@@ -1218,8 +1208,7 @@ public class RedisUtil {
      */
     public Set<String> zReverseRangeByScore(String key, double min,
                                             double max, long start, long end) {
-        return redisTemplate.opsForZSet().reverseRangeByScore(key, min, max,
-                start, end);
+        return redisTemplate.opsForZSet().reverseRangeByScore(key, min, max, start, end);
     }
 
     /**
@@ -1308,10 +1297,8 @@ public class RedisUtil {
      * @param destKey
      * @return
      */
-    public Long zUnionAndStore(String key, Collection<String> otherKeys,
-                               String destKey) {
-        return redisTemplate.opsForZSet()
-                .unionAndStore(key, otherKeys, destKey);
+    public Long zUnionAndStore(String key, Collection<String> otherKeys, String destKey) {
+        return redisTemplate.opsForZSet().unionAndStore(key, otherKeys, destKey);
     }
 
     /**
@@ -1324,8 +1311,7 @@ public class RedisUtil {
      */
     public Long zIntersectAndStore(String key, String otherKey,
                                    String destKey) {
-        return redisTemplate.opsForZSet().intersectAndStore(key, otherKey,
-                destKey);
+        return redisTemplate.opsForZSet().intersectAndStore(key, otherKey, destKey);
     }
 
     /**
@@ -1338,8 +1324,7 @@ public class RedisUtil {
      */
     public Long zIntersectAndStore(String key, Collection<String> otherKeys,
                                    String destKey) {
-        return redisTemplate.opsForZSet().intersectAndStore(key, otherKeys,
-                destKey);
+        return redisTemplate.opsForZSet().intersectAndStore(key, otherKeys, destKey);
     }
 
     /**
