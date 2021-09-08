@@ -1,7 +1,7 @@
 # RedisUtil
 
 ## 介绍
-&emsp;最全的Java操作Redis的工具类，封装了对Redis五种基本类型的各种操作，力求符合Redis的原生操作，使用StringRedisTemplate实现！
+Redis的工具类，封装了对Redis五种基本类型的各种操作，使用StringRedisTemplate实现！
 
 **快速导航：**<br>
 [key命令操作](#一keys相关命令) | 
@@ -42,7 +42,7 @@
 |  4   | Boolean hasKey(String key)                              | 检查key是否存在                           |
 |  5   | Boolean expire(String key, long timeout, TimeUnit unit) | 设置过期时间                              |
 |  6   | Boolean expireAt(String key, Date date)                 | 设置过期时间                              |
-|  7   | Set<String> keys(String pattern)                        | 查找所有符合给定模式(pattern)的key        |
+|  7   | `Set<String> keys(String pattern)`                      | 查找所有符合给定模式(pattern)的key        |
 |  8   | Boolean move(String key, int dbIndex)                   | 将当前数据库的key移动到给定的数据库db当中 |
 |  9   | Boolean persist(String key)                             | 移除key的过期时间，key将持久保持          |
 |  10  | Long getExpire(String key, TimeUnit unit)               | 返回key的剩余的过期时间                   |
@@ -104,8 +104,8 @@
 |  13  | List hValues(String key)                                     | 获取哈希表中所有值                                           |
 |  14  | Cursor hScan(String key, ScanOptions options)                | 迭代哈希表中的键值对                                         |
 |      | **引入序列化依赖**                                           | `<dependency>     <groupId>com.dyuproject.protostuff</groupId>     <artifactId>protostuff-core</artifactId>     <version>1.0.8</version> </dependency>  <dependency>     <groupId>com.dyuproject.protostuff</groupId>     <artifactId>protostuff-runtime</artifactId>     <version>1.0.8</version> </dependency>` |
-|  15  | getListCache(final String key, Class<T> targetClass)         | 获取缓存中的List，targetClass是序列化的类                    |
-|  16  | putListCacheWithExpireTime(String key, List<T> objList, final long expireTime) | 把List放到缓存，expireTime是过期策略                         |
+|  15  | `getListCache(final String key, Class<T> targetClass)`       | 获取缓存中的List，targetClass是序列化的类                    |
+|  16  | `putListCacheWithExpireTime(String key, List<T> objList, final long expireTime)` | 把List放到缓存，expireTime是过期策略                         |
 
 <br>
 
@@ -157,13 +157,13 @@
 |  10  | Long sIntersectAndStore(String key, String oKey, String dKey) | key集合与oKey的交集存储到dKey中 |
 |  11  | Long sIntersectAndStore(String key,Collection<String> oKeys,String dKey) | key与多个集合的交集存储到dKey中 |
 |  12  | `Set<String> sUnion(String key, String otherKeys)`           | 获取两个集合的并集              |
-|  13  | Set<String> sUnion(String key, Collection<String> otherKeys) | 获取key集合与多个集合的并集     |
+|  13  | `Set<String> sUnion(String key, Collection<String> otherKeys)` | 获取key集合与多个集合的并集     |
 |  14  | Long sUnionAndStore(String key, String otherKey, String destKey) | key集合与oKey的并集存储到dKey中 |
 |  15  | Long sUnionAndStore(String key,Collection<String> oKeys,String dKey) | key与多个集合的并集存储到dKey中 |
-|  16  | Set<String> sDifference(String key, String otherKey)         | 获取两个集合的差集              |
-|  17  | Set<String> sDifference(String key, Collection<String> otherKeys) | 获取key集合与多个集合的差集     |
+|  16  | `Set<String> sDifference(String key, String otherKey)`       | 获取两个集合的差集              |
+|  17  | `Set<String> sDifference(String key, Collection<String> otherKeys)` | 获取key集合与多个集合的差集     |
 |  18  | Long sDifference(String key, String otherKey, String destKey) | key与oKey集合的差集存储到dKey中 |
-|  19  | Long sDifference(String key,Collection<String> otherKeys,String dKey) | key与多个集合的差集存储到dKey中 |
+|  19  | `Long sDifference(String key,Collection<String> otherKeys,String dKey)` | key与多个集合的差集存储到dKey中 |
 |      | **添加相关**                                                 |                                 |
 |  20  | Long sAdd(String key, String... values)                      | 添加                            |
 |      | **删除相关**                                                 |                                 |
@@ -177,16 +177,16 @@
 
 |  NO  | 方法                                                         | 描述                               |
 | :--: | ------------------------------------------------------------ | ---------------------------------- |
-|  1   | Set<String> zRange(String key, long start, long end)         | 获取元素,小到大排序,s开始e结束位置 |
-|  2   | Set<TypedTuple<String>> zRangeWithScores(String key, long start, long end) | 获取集合元素, 并且把score值也获取  |
-|  3   | Set<String> zRangeByScore(String key, double min, double max) | 根据score范围查询元素,从小到大排序 |
-|  4   | Set<TypedTuple<String>> zRangeByScoreWithScores(key,double min,double max) | 根据score范围查询元素,并返回score  |
-|  5   | Set<TypedTuple> zRangeByScoreWithScores(key,double min,max,long start,end) | 根据score查询元素,s开始e结束位置   |
-|  6   | Set<String> zReverseRange(String key, long start, long end)  | 获取集合元素, 从大到小排序         |
-|  7   | Set<TypedTuple<String>> zReverseRangeWithScores(key, long start, long end) | 获取元素,从大到小排序,并返回score  |
-|  8   | Set<String> zReverseRangeByScore(String key, double min, double max) | 根据score范围查询元素,从大到小排序 |
-|  9   | Set<TypedTuple> zReverseRangeByScoreWithScores(key,double min,double max) | 根据score查询,大到小排序返回score  |
-|  10  | Set<String> zReverseRangeByScore(key, double min, max, long start, end) | 根据score查询,大到小,s开始e结束    |
+|  1   | `Set<String> zRange(String key, long start, long end)`       | 获取元素,小到大排序,s开始e结束位置 |
+|  2   | `Set<TypedTuple<String>> zRangeWithScores(String key, long start, long end)` | 获取集合元素, 并且把score值也获取  |
+|  3   | `Set<String> zRangeByScore(String key, double min, double max)` | 根据score范围查询元素,从小到大排序 |
+|  4   | `Set<TypedTuple<String>> zRangeByScoreWithScores(key,double min,double max)` | 根据score范围查询元素,并返回score  |
+|  5   | `Set<TypedTuple> zRangeByScoreWithScores(key,double min,max,long start,end)` | 根据score查询元素,s开始e结束位置   |
+|  6   | `Set<String> zReverseRange(String key, long start, long end)` | 获取集合元素, 从大到小排序         |
+|  7   | `Set<TypedTuple<String>> zReverseRangeWithScores(key, long start, long end)` | 获取元素,从大到小排序,并返回score  |
+|  8   | `Set<String> zReverseRangeByScore(String key, double min, double max)` | 根据score范围查询元素,从大到小排序 |
+|  9   | `Set<TypedTuple> zReverseRangeByScoreWithScores(key,double min,double max)` | 根据score查询,大到小排序返回score  |
+|  10  | `Set<String> zReverseRangeByScore(key, double min, max, long start, end)` | 根据score查询,大到小,s开始e结束    |
 |  11  | Long zRank(String key, Object value)                         | 返回元素在集合的排名,score由小到大 |
 |  12  | Long zReverseRank(String key, Object value)                  | 返回元素在集合的排名,score由大到小 |
 |  13  | Long zCount(String key, double min, double max)              | 根据score值范围获取集合元素的数量  |
@@ -197,7 +197,7 @@
 |  18  | Long zUnionAndStore(String key,Collection<String> otherKeys,String dKey) | 获取key和多个集合并集并存在dKey中  |
 |  19  | Long zIntersectAndStore(String key, String otherKey, String destKey) | 获取key和oKey交集并存在destKey中   |
 |  20  | Long zIntersectAndStore(String key,Collection<String> oKeys,String dKey) | 获取key和多个集合交集并存在dKey中  |
-|  21  | Cursor<TypedTuple<String>> zScan(String key, ScanOptions options) | 使用迭代器获取                     |
+|  21  | `Cursor<TypedTuple<String>> zScan(String key, ScanOptions options)` | 使用迭代器获取                     |
 |      | **添加相关**                                                 |                                    |
 |  22  | Boolean zAdd(String key, String value, double score)         | 添加元素,zSet按score由小到大排列   |
 |  23  | Long zAdd(String key, Set<TypedTuple<String>> values)        | 批量添加,TypedTuple使用见下面介绍  |
