@@ -215,7 +215,6 @@ TypedTuple<String> typedTuple = new DefaultTypedTuple<String>(value,score)
 ```
 
 
-
 <br>
 
 
